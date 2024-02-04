@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1920px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+}
+
+.container{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.black-btn, .random-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    margin: 20px;
+}
+
+.black-btn {
+    background-color: black;
+}
+
+.random-btn{
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    color: black;
+}
+
+
+
+
