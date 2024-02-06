@@ -4,41 +4,88 @@
 }
 
 body {
-    width: 1920px;
+    width: auto;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: darkcyan;
+    background-color: darkcyan;  
+    padding: 0px 500px;  
 }
 
 .container{
     display: flex;
     width: 500px;
     height: 500px;
-    border: 1px solid white;
     flex-direction: column;
     padding: 20px;
     border-radius: 20px;
+    background-color: #7B3F00;
 }
 
-.black-btn, .random-btn {
+.interaction-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
+    border: 1px black solid;
+    width: 250px;
+    height: 500px;
+    position: relative;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.black-btn, .random-btn, .resize-btn, .toggle-btn{
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
-    color: white;
     font-weight: 800;
     margin: 20px;
+
+}
+
+.screen-container {
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: darkcyan;
 }
 
 .black-btn {
     background-color: black;
+    color: white;
 }
 
 .random-btn{
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
     color: black;
 }
+
+.interaction-text{
+ color: lightseagreen;
+
+}
+
+.interactionText-container{
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+
 
 
 
