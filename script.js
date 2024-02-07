@@ -6,13 +6,14 @@ const blackBtn = document.querySelector(".black-btn");
 const colorPicker = document.querySelector('#color-picker');
 
 
-
+//clear the grid when called upon
 function clearGrid(){
     do{
         container.removeChild(container.firstChild);
     }while(container.firstChild);
 }
 
+// a function that change the size of the grid depending on the user
 function changeGrid(){
     let isGrid = +prompt();
     let grid= "";
@@ -25,7 +26,6 @@ function changeGrid(){
         alert("Must be greater than 10 and less than 100")
     };
 }
-
 
 // make divs and append it dynamically
 function createGrid(grid){
@@ -61,9 +61,14 @@ function createGrid(grid){
 const resizeBtn = document.querySelector('.resize-btn');
 resizeBtn.addEventListener('click', changeGrid);
 
-
 // Generate Random Colors
 rgbBtn.addEventListener('click', generateRandomColors);
+
+// Generate Black Colors
+blackBtn.addEventListener('click',generateBlackColors);
+
+// A Event Listener changes background color 
+colorPicker.addEventListener("change", changeBackgroundColor);
 
 function generateRandomColors(){
     const divSelector = document.querySelectorAll('.grid');
@@ -82,10 +87,7 @@ function generateRandomColors(){
         })
     });
 }
-
-// Generate Black Colors
-blackBtn.addEventListener('click',generateBlackColors);
-
+// a function that generate colors
 function generateBlackColors(){
     const divSelector = document.querySelectorAll('.grid'); 
     divSelector.forEach((div) => {
@@ -122,11 +124,7 @@ function toggleGrid(){
     }
 };
 
-
-
-colorPicker.addEventListener("change", changeBackgroundColor);
-
-
+// a function that changes the background color
 function changeBackgroundColor(){
     const bgColor = document.querySelectorAll('.siblings-container');
 
@@ -135,9 +133,5 @@ function changeBackgroundColor(){
     })
 }
 
-
-
-
-
-// default Size of grid
+// default Size of grid = 10;
 createGrid(10);
