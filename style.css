@@ -7,10 +7,18 @@ body {
     width: auto;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: darkcyan;  
     padding: 0px 500px;  
+}
+
+.body-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .container{
